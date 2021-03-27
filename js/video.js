@@ -49,8 +49,10 @@ document.querySelector("#slider").addEventListener("click", function() {
 document.querySelector("#mute").addEventListener("click", function() {
 	if (video.muted){
 		video.muted = false;
+		document.querySelector("#mute").innerHTML = "Mute";
 		document.querySelector("#volume").innerHTML = video.volume*100 +"%";
 	}else{
+		document.querySelector("#mute").innerHTML = "Unmute";
 		document.querySelector("#volume").innerHTML = 0 +"%";
 		video.muted = true;
 	}
